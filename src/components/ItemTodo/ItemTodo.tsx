@@ -31,9 +31,13 @@ const Label = styled.label`
 `
 const ItemText = styled.div<{checked: boolean}>`
 	display: inline-block;
-	min-width: 80%;
+	width: calc(100% - 23px);
 	color: ${({ checked }) => checked ? '#E6E6E6' : '#4D4D4D'};
 	text-decoration: ${({ checked }) => checked ? 'line-through' : 'none'};
+	display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 const InputCheck = styled.input`
 	display: inline-block;
